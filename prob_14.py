@@ -12,10 +12,7 @@ Which starting number, under one million, produces the longest chain?
 
 NOTE: Once the chain starts the terms are allowed to go above one million."""
 
-import sys
 import time
-import math
-#sys.setrecursionlimit(5000)
 
 def length(n):
     if n in fault:
@@ -23,7 +20,7 @@ def length(n):
     if n == 1:
         return 1
     elif n%2 == 0:
-        return 1 + length(n >> 2)
+        return 1 + length(n >> 1)
     else:
         return 1 + length(3*n+1)
 
