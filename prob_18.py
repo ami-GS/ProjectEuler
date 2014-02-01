@@ -23,11 +23,11 @@ while i < len(triList)-1:
     tmpSum = 0
     for j in range(i+1):
         if tmpSum < triList[i][j] + triList[i+1][j]:
-            triList[i+1][j] += triList[i][j]
+            triList[i+1][j] += triList[i][j]#sum left node
         else:
             triList[i+1][j] = tmpSum
-        tmpSum = triList[i+1][j+1] + triList[i][j]        
-    triList[i+1][i+1] = tmpSum
+        tmpSum = triList[i+1][j+1] + triList[i][j]#sum right node
+    triList[i+1][i+1] = tmpSum#right end
     i += 1
 
 print max(triList[len(triList)-1])
