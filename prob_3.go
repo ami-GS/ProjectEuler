@@ -8,10 +8,10 @@ import (
 var N = 600851475143
 
 func main() {
-	list := make([]uint8, int(math.Sqrt(float64(N))))
+	SqrtN := int(math.Sqrt(float64(N)))
+	list := make([]uint8, SqrtN)
 	list[2] = 1
 	list[3] = 1
-	SqrtN := int(math.Sqrt(float64(N)))
 	if SqrtN%2 == 0 {
 		SqrtN -= 1
 	}
